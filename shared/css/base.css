@@ -1,0 +1,5 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #111; color: #eee; }
+main { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+a { color: #6cf; }
+canvas { display: block; margin: 0 auto; background: #000; max-width: 100%; }

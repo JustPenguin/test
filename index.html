@@ -1,9 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
-<title>Push to Github</title>    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>遊戲大廳</title>
+<link rel="stylesheet" href="shared/css/base.css">
 </head>
 <body>
-    Push to Github
+<main>
+  <h1>遊戲大廳</h1>
+  <ul id="games"></ul>
+</main>
+<script>
+// 新增遊戲時,在 games.json 加一筆即可
+fetch('games.json').then(r => r.json()).then(list => {
+  document.getElementById('games').innerHTML = list
+    .map(g => `<li><a href="games/${g.id}/">${g.title}</a> <small>${g.description || ''}</small></li>`)
+    .join('');
+});
+</script>
 </body>
-
 </html>
